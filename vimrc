@@ -145,6 +145,8 @@ let g:tagbar_autoclose = 1
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc', '\.out$', 'bak$', 'node_modules', 'dist']
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " YCM
 nnoremap <buffer> <silent> gd :YcmCompleter GoTo<cr>
